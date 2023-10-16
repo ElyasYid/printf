@@ -1,15 +1,15 @@
 #include "main.h"
 /**
  * printf_exclusive_string - print exclusuives string.
- * @val: argumen t.
+ * @val: arguments
  * Return: the length of the string.
  */
 
-int printf_exclusive_string(va_list val)
+int printf_exc_str(va_list val)
 {
 	char *s;
 	int i, len = 0;
-	int cast;
+	int j;
 
 	s = va_arg(val, char *);
 	if (s == NULL)
@@ -21,13 +21,13 @@ int printf_exclusive_string(va_list val)
 			_putchar('\\');
 			_putchar('x');
 			len = len + 2;
-			cast = s[i];
-			if (cast < 16)
+			j = s[i];
+			if (j < 16)
 			{
 				_putchar('0');
 				len++;
 			}
-			len = len + printf_HEX_aux(cast);
+			len = len + printf_HEX_aux(j);
 		}
 		else
 		{
