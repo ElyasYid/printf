@@ -1,11 +1,11 @@
 #include "main.h"
 /**
- * printf_exclusive_string - print exclusuives string.
+ * prnt_estr - print exclusuives string.
  * @val: arguments
  * Return: the length of the string.
  */
 
-int printf_exc_str(va_list val)
+int prnt_estr(va_list val)
 {
 	char *s;
 	int i, len = 0;
