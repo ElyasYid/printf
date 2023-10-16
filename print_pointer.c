@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * printf_pointer - prints an hexgecimal number.
+ * prnt_pointer - prints address of pointer
  * @val: arguments.
  * Return: counter.
  */
-int printf_pointer(va_list val)
+int prnt_pointer(va_list val)
 {
 	void *p;
 	char *s = "(nil)";
