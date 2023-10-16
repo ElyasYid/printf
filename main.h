@@ -21,28 +21,28 @@ typedef struct format
 	int (*f)();
 } convert_match;
 
-int printf_pointer(va_list val);
+int prnt_pointer(va_list val);
 int _putchar(char c);
-int printf_oct(va_list val);
-int printf_int(va_list args);
-int printf_hex_aux(unsigned long int num);
-int printf_HEX_aux(unsigned int num);
+int prnt_octal(va_list val);
+int prnt_integers(va_list args);
+int prnt_hexex(unsigned long int num);
+int prnt_HEXEX(unsigned int num);
 int _strlenc(const char *s);
-int printf_HEX(va_list val);
-int printf_hex(va_list val);
-int printf_bin(va_list val);
-int printf_unsigned(va_list args);
-int printf_srev(va_list args);
-int printf_dec(va_list args);
+int prnt_HEX(va_list val);
+int prnt_hex(va_list val);
+int prnt_binary(va_list val);
+int prnt_unsigned(va_list args);
+int prnt_strrev(va_list args);
+int prnt_decimal(va_list args);
 int _strlen(char *s);
 int *_strcpy(char *dest, char *src);
 int rev_string(char *s);
 int _strlenc(const char *s);
-int printf_37(void);
-int printf_exclusive_string(va_list val);
-int printf_char(va_list val);
-int printf_string(va_list val);
-int printf_rot13(va_list args);
+int prnt_37(void);
+int prnt_exc_str(va_list val);
+int prnt_ch(va_list val);
+int prnt_string(va_list val);
+int prnt_rot13(va_list args);
 int _printf(const char *format, ...);
 
 #endif
