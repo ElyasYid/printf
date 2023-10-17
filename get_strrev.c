@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * printf_srev - function that prints a string in reverse
- * @args: type struct va_arg where is allocated printf arguments
+ * printf_srev - prints string in reverse
+ * @args: arguments
  * Return: the string
  */
 int printf_srev(va_list args)

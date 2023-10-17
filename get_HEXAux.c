@@ -1,36 +1,36 @@
 #include "main.h"
 
 /**
- * printf_HEX_aux - prints an hex number.
- * @num: number to print.
- * Return: counter.
+ * printf_HEX_aux - prints hex number.
+ * @num: the number to print.
+ * Return: count
  */
 int printf_HEX_aux(unsigned int num)
 {
 	int i;
-	int *array;
-	int counter = 0;
-	unsigned int temp = num;
+	int *arr;
+	int c = 0;
+	unsigned int t = num;
 
 	while (num / 16 != 0)
 	{
 		num /= 16;
-		counter++;
+		c++;
 	}
-	counter++;
-	array = malloc(counter * sizeof(int));
+	c++;
+	arr = malloc(c * sizeof(int));
 
-	for (i = 0; i < counter; i++)
+	for (i = 0; i < c; i++)
 	{
-		array[i] = temp % 16;
-		temp /= 16;
+		arr[i] = t % 16;
+		t /= 16;
 	}
-	for (i = counter - 1; i >= 0; i--)
+	for (i = c - 1; i >= 0; i--)
 	{
-		if (array[i] > 9)
-			array[i] = array[i] + 7;
-		_putchar(array[i] + '0');
+		if (arr[i] > 9)
+			arr[i] = arr[i] + 7;
+		_putchar(arr[i] + '0');
 	}
-	free(array);
-	return (counter);
+	free(arr);
+	return (c);
 }

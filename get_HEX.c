@@ -1,37 +1,37 @@
 #include "main.h"
 
 /**
- * printf_HEX - prints an hex number.
- * @val: arguments.
- * Return: counter.
+ * printf_HEX - prints hex number.
+ * @val: arguments
+ * Return: count
  */
 int printf_HEX(va_list val)
 {
 	int i;
-	int *array;
-	int counter = 0;
-	unsigned int num = va_arg(val, unsigned int);
-	unsigned int temp = num;
+	int *arr;
+	int c = 0;
+	unsigned int n = va_arg(val, unsigned int);
+	unsigned int t = n;
 
-	while (num / 16 != 0)
+	while (n / 16 != 0)
 	{
-		num /= 16;
-		counter++;
+		n /= 16;
+		c++;
 	}
-	counter++;
-	array = malloc(counter * sizeof(int));
+	c++;
+	arr = malloc(c * sizeof(int));
 
-	for (i = 0; i < counter; i++)
+	for (i = 0; i < c; i++)
 	{
-		array[i] = temp % 16;
-		temp /= 16;
+		arr[i] = t % 16;
+		t /= 16;
 	}
-	for (i = counter - 1; i >= 0; i--)
+	for (i = c - 1; i >= 0; i--)
 	{
-		if (array[i] > 9)
-			array[i] = array[i] + 7;
-		_putchar(array[i] + '0');
+		if (arr[i] > 9)
+			arr[i] = arr[i] + 7;
+		_putchar(arr[i] + '0');
 	}
-	free(array);
-	return (counter);
+	free(arr);
+	return (c);
 }
